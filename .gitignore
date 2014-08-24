@@ -7,3 +7,5 @@ package/
 .*.swp
 .swp
 .DS_Store
+background.js
+npm-debug.log

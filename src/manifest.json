@@ -2,6 +2,7 @@
     "app": {
         "background": {
             "scripts": [
+                "background.js",
                 "scripts/background.js"
             ]
         }
@@ -15,13 +16,29 @@
     "manifest_version": 2,
     "minimum_chrome_version": "24",
     "name": "ChromeADB",
+    "version": "0.4.2",
+    "sockets": {
+      "tcpServer": {
+        "listen": "*"
+      }
+    },
     "permissions": [
+        "system.network",
+        "storage",
         "fileSystem",
         {
             "socket": [
                 "tcp-connect"
             ]
+        },
+        "usb",
+        {
+            "usbDevices": [
+              {
+                "vendorId": 6353,
+                "productId": 20194
+              }
+            ]
         }
-    ],
-    "version": "0.4.2"
+    ]
 }
